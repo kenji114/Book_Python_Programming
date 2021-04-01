@@ -5,6 +5,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
+q
 
 df_wine = pd.read_csv(
     'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data',
