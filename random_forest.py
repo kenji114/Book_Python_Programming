@@ -26,15 +26,15 @@ tot = sum(eigen_vals)
 var_exp = [i/tot for i in sorted(eigen_vals, reverse=True)]
 
 #　累積和 分散説明率のグラフを出力する。
-# cum_var_exp = np.cumsum(var_exp)
-# plt.bar(range(1,14), var_exp, alpha=0.5, align='center',
-#         label='individual explained variance')
-# plt.step(range(1,14), cum_var_exp, where='mid',
-#         label='cumulative explained variance')
-# plt.ylabel('Explained variance ratio')
-# plt.xlabel('Principal Components')
-# plt.legend(loc='best')
-# plt.show()
+cum_var_exp = np.cumsum(var_exp)
+plt.bar(range(1,14), var_exp, alpha=0.5, align='center',
+        label='individual explained variance')
+plt.step(range(1,14), cum_var_exp, where='mid',
+        label='cumulative explained variance')
+plt.ylabel('Explained variance ratio')
+plt.xlabel('Principal Components')
+plt.legend(loc='best')
+plt.show()
 
 # for i in range(len(eigen_vecs)):
 #     print(eigen_vecs)
