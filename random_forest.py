@@ -25,7 +25,7 @@ eigen_vals, eigen_vecs = np.linalg.eig(cov_mat)
 tot = sum(eigen_vals)
 var_exp = [i/tot for i in sorted(eigen_vals, reverse=True)]
 
-#　累積和
+#　累積和 分散説明率のグラフを出力する。
 # cum_var_exp = np.cumsum(var_exp)
 # plt.bar(range(1,14), var_exp, alpha=0.5, align='center',
 #         label='individual explained variance')
@@ -51,3 +51,11 @@ print("----------------------------------------------------")
 
 w = np.hstack((eigen_pairs[0][1][:, np.newaxis], eigen_pairs[1][1][:, np.newaxis]))
 print('Matrix W: \n', w)
+
+X_train_pca = X_train_std[0].dot(w)
+
+# ２次元に落とされた新たな軸で、特性を把握。
+colors = ['r','g','b']
+markers = ['s', 'x', 'o']
+for l, c, m in zip()
+
