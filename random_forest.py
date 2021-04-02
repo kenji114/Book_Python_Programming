@@ -57,5 +57,5 @@ X_train_pca = X_train_std[0].dot(w)
 # ２次元に落とされた新たな軸で、特性を把握。
 colors = ['r','g','b']
 markers = ['s', 'x', 'o']
-for l, c, m in zip()
+# for l, c, m in zip()
 
