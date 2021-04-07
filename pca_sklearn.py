@@ -50,10 +50,13 @@ def main():
         'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data',
         header=None)
 
-    # print(df_wine)
+    # print(df_wine) # https://note.nkmk.me/python-pandas-at-iat-loc-iloc/
+    # print(df_wine.iloc[:,1:].values) # ワインのclassをきめる様々なパラメータのデータ
+    # print(df_wine.iloc[:,0].values)  # ワインのclassのデータ
     X, y = df_wine.iloc[:, 1:].values, df_wine.iloc[:, 0].values
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+    # print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
     sc = StandardScaler()
     min_max = sc.fit(X_train)
     X_train_std = sc.transform(X_train)
